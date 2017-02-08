@@ -1,0 +1,29 @@
+/* line 1, ../../compass/sass/styles.scss */
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  animation: color-change 30s infinite;
+}
+
+/* line 7, ../../compass/sass/styles.scss */
+a {
+  color: #00B7FF;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: #7FD1B9;
+  }
+  25% {
+    background-color: #FFC09F;
+  }
+  50% {
+    background-color: #FFEE93;
+  }
+  75% {
+    background-color: #258EA6;
+  }
+  100% {
+    background-color: #7FD1B9;
+  }
+}
