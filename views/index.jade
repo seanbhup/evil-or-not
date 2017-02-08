@@ -14,13 +14,15 @@ block content
               h1.text-center EVIL or NOT?
               #game-wrapper
                   #image-wrapper
-                      img.dr-ford-image(src="images/dr_ford.png")
+                      img.main-image(src="#{imageToRender}")
                   #character-name.text-center 
-                      h3 Dr. Ford - Westworld
+                      h3 #{imageText}
                   #buttons-wrapper.text-center
-                      button.evil-button.btn.btn-danger EVIL!
+                      a(href="/vote/evil/#{imageIdToPassToJade}")
+                          button.evil-button.btn.btn-danger EVIL!
                       span or
-                      button.not-evil-button.btn.btn-success NOT!
+                      a(href="/vote/not/#{imageIdToPassToJade}")
+                          button.not-evil-button.btn.btn-success NOT!
               
       
       
