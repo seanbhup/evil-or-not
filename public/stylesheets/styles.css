@@ -40,7 +40,6 @@ body {
 
 /* line 30, ../../compass/sass/styles.scss */
 #game-wrapper {
-  border: 1px dashed black;
   height: 400px;
   width: 300px;
   margin: auto;
@@ -50,4 +49,22 @@ body {
 .evil-button, .not-evil-button {
   margin: 20px;
   width: 100px;
+}
+
+/* line 43, ../../compass/sass/styles.scss */
+#buttons-wrapper span {
+  font-size: 16px;
+}
+
+/* line 49, ../../compass/sass/styles.scss */
+.top-nav button {
+  border-radius: 0;
+}
+
+/* line 54, ../../compass/sass/styles.scss */
+img {
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 3px 5px 5px #124559;
 }
