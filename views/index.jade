@@ -1,5 +1,22 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  body
+      button.evil-or-not-button.btn.btn-primary Back to the Game
+      button.standings-button.btn.btn-warning Standings
+      .container.col-sm-8.col-sm-offset-2
+          .row
+              h1.text-center EVIL or NOT?
+              #game-wrapper
+                  #image-wrapper
+                      img(src="http://placehold.it/298x398")
+                  #character-name.text-center 
+                      h3 M.NIGHT SHYAMALAN
+                  #buttons-wrapper.text-center
+                      button.evil-button.btn.btn-danger EVIL!
+                      button.not-evil-button.btn.btn-success NOT!
+              
+      
+      
+      
