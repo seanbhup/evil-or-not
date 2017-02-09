@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+    .top-nav
+        a(href="/") 
+            button.evil-or-not-button.btn.btn-primary Back to the Game
+        a(href="/standings")  
+            button.standings-button.btn.btn-warning Standings
+
+    .container
+        .row
+            form(method="post" action="formSubmit" encType="multipart/form-data")
+                .col-sm-8.col-sm-offset-2
+                    h1.text-center Upload a new EVIL or NOT Character
+                    .upload-wrapper.text-center
+                        .name-character Name your Character
+                            input.GRAP(type="text" name="characterName")
+                        input.choose-file(type="file" name="imageToUpload")
+                        button.btn.btn-warning(type="submit") UPLOAD
+        .row
+            a(href="/standings")  
+                button.btn.btn-danger(href="/") Cancel
+            
+                    

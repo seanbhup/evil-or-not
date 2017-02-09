@@ -3,26 +3,37 @@ extends layout
 block content
 
   body
-      .top-nav
-          a(href="/") 
-              button.evil-or-not-button.btn.btn-primary Back to the Game
-          a(href="/standings")  
-              button.standings-button.btn.btn-warning Standings
-             
-      .container.col-sm-8.col-sm-offset-2
-          .row
-              h1.text-center EVIL or NOT?
-              #game-wrapper
-                  #image-wrapper
-                      img.main-image(src="#{imageToRender}")
-                  #character-name.text-center 
-                      h3 #{imageText}
-                  #buttons-wrapper.text-center
-                      a(href="/vote/evil/#{imageIdToPassToJade}")
-                          button.evil-button.btn.btn-danger EVIL!
-                      span or
-                      a(href="/vote/not/#{imageIdToPassToJade}")
-                          button.not-evil-button.btn.btn-success NOT!
+    -if (!msg)
+        .top-nav
+            a(href="/") 
+                button.evil-or-not-button.btn.btn-primary Back to the Game
+            a(href="/standings")  
+                button.standings-button.btn.btn-warning Standings
+    
+        .container.col-sm-8.col-sm-offset-2
+            .row
+                h1.text-center EVIL or NOT?
+                #game-wrapper
+                    #image-wrapper
+                        img.main-image(src="#{imageToRender}")
+                    #character-name.text-center 
+                        h4 #{imageText}
+                    #buttons-wrapper.text-center
+                        a(href="/vote/evil/#{imageIdToPassToJade}")
+                            button.evil-button.btn.btn-danger EVIL!
+                        span or
+                        a(href="/vote/not/#{imageIdToPassToJade}")
+                            button.not-evil-button.btn.btn-success NOT!
+        
+    -else
+        .top-nav
+            a(href="/") 
+                button.evil-or-not-button.btn.btn-primary Back to the Game
+            a(href="/standings")  
+                button.standings-button.btn.btn-warning Standings
+            h1.text-center Nothing Left Bitch
+    
+        
               
       
       

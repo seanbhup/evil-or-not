@@ -2,9 +2,20 @@ extends layout
 
 block content
 
-  body
-      .top-nav
-          a(href="/") 
-              button.evil-or-not-button.btn.btn-primary Back to the Game
-          a(href="/standings")  
-              button.standings-button.btn.btn-warning Standings
+
+    .top-nav
+        a(href="/") 
+            button.evil-or-not-button.btn.btn-primary Back to the Game
+        a(href="/standings")  
+            button.standings-button.btn.btn-warning Standings
+        table.table.table-bordered.table-striped.standings-table
+            tr
+                th Character
+                th Evilness Level
+            - for (let total of totalVotes)
+                tr
+                    td #{total.image_name}
+                    td #{total.total_votes}
+                    
+                    
+                    
